@@ -6,7 +6,7 @@
     "start": "run-p start:*",
     "start:eleventy": "eleventy --serve",
     "start:postcss": "postcss src/styles/*.css --dir _site --watch",
-    "build": "run-s clean build:eleventy build:postcss",
+    "build": "run-s clean build:eleventy",
     "build:eleventy": "cross-env ELEVENTY_PRODUCTION=true eleventy",
     "build:postcss": "cross-env NODE_ENV=production postcss src/ --dir _site",
     "clean": "rimraf _site"
