@@ -9,12 +9,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({ callbacks: { ready: browserSyncReady }});
   }
 
-  // Passthrough
-  eleventyConfig.addPassthroughCopy({ "src/static": "." });
-
-  // Watch targets
-  eleventyConfig.addWatchTarget("./src/styles/");
-
   var pathPrefix = "";
   if (process.env.GITHUB_REPOSITORY) {
     pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
